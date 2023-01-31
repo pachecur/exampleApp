@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "2.0.0",
+  "description": "mainAoo",
+  "main": "index.js",
+  "author": "First Factory",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "start:secondary": "yarn workspace secondaryApp start",
+    "start:mainApp": "yarn workspace mainApp start",
+    "build:dev:secondary": "yarn workspace secondaryApp build:dev",
+    "build:dev:mainApp": "yarn build:ui && yarn workspace mainApp build:dev",
+    "build:prod:secondary": "yarn workspace secondaryApp build:prod",
+    "environment": "./bin/environmentURLs.sh",
+    "secondary": "yarn workspace secondaryApp"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

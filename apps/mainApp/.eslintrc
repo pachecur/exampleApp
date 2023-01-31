@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": ["**/applications/*"],
+  "rules": {
+    "object-curly-spacing": ["error", "never"],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-debugger": "error",
+    "no-alert": "error",
+    "no-unused-vars": "off",
+    "sort-imports": ["error", {"ignoreCase": true}],
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "no-useless-catch": "off",
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "@typescript-eslint/member-delimiter-style": [
+      "error", 
+      {
+        "multiline": {
+            "delimiter": "none",
+            "requireLast": false
+        },
+        "singleline": {
+            "delimiter": "comma",
+            "requireLast": false
+        }
+      }
+    ],
+    "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
